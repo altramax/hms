@@ -1,5 +1,5 @@
 {
-  "name": "elderlies",
+  "name": "hms",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
     "@supabase/supabase-js": "^2.49.3",
     "@tanstack/react-query": "^5.69.0",
     "@tanstack/react-query-devtools": "^5.69.0",
     "axios": "^1.8.4",
     "framer-motion": "^12.4.10",
+    "immer": "^10.1.1",
     "next": "15.1.5",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.2",
+    "react-toastify": "^11.0.5",
+    "zod": "^3.24.4",
+    "zustand": "^5.0.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

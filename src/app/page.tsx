@@ -1,6 +1,6 @@
-import SignInTemplate from "@/components/templates/SigninTemplate/SigninTempate";
+import AuthenticationTemplate from "@/components/templates/authentication/authentication-template";
+
 export default function Page() {
-    return (
-        <SignInTemplate />
-    );
+  console.log("app render");
+  return <AuthenticationTemplate />;
 }

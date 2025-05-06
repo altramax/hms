@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import NextAuthProvider from "./session-provider";
-import ReactQueryProvider from "./react-query-provider";
+import SessionProvider from "./session-provider";
+import ToastProvider from "./toast-provider";
 
 type props = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 export default function Provider({ children }: props) {
@@ -16,8 +16,9 @@ export default function Provider({ children }: props) {
   if (!mounted) return null;
 
   return (
-    <NextAuthProvider>
-      <ReactQueryProvider>{children}</ReactQueryProvider>
-    </NextAuthProvider>
+    <SessionProvider>
+      {children}
+      <ToastProvider />
+    </SessionProvider>
   );
 }

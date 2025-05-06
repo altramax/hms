@@ -9,8 +9,8 @@ interface buttonProp {
   readonly color?: "white" | "blue";
   readonly loading?: boolean;
   readonly width?: string;
-  readonly classname?: string;
-  readonly onclick: ()=>void
+  readonly className?: string;
+  readonly onClick?: ()=>void
 }
 export default function Button({
   value,
@@ -20,13 +20,13 @@ export default function Button({
   color = "blue",
   loading = false,
   width,
-  classname,
-  onclick,
+  className,
+  onClick,
 }: buttonProp) {
   return (
     <button
       type={type}
-      className={`${classname} flex justify-center ${width} ${
+      className={`${className} flex justify-center ${width} ${
         variant === "small"
           ? "px-6 py-2 text-base min-w-[10rem]"
           : "px-12 py-3 text-2xl min-w-[20rem]"
@@ -36,7 +36,7 @@ export default function Button({
           : "text-[#2393FF] bg-white hover:bg-[#bce1ff]"
       } font-semibold rounded-3xl bg-gradient-to-r shadow-md transition-all duration-300`}
       disabled={loading}
-      onClick={onclick}
+      onClick={onClick}
     >
       {loading === true ? (
         <div>
